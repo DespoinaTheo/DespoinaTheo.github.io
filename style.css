@@ -1,0 +1,471 @@
+
+/* ===================================
+   DESPOINA THEODORATOU - PORTFOLIO
+   =================================== */
+
+/* GENERAL */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+
+/* ===================================
+   HEADER
+   =================================== */
+
+.site-header {
+  position: absolute;
+  top: 45px;
+  left: 65px;
+  z-index: 10;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.site-header p {
+  margin-top: 8px;
+  font-size: 15px;
+  font-style: normal;
+}
+
+
+/* ===================================
+   SCREENS
+   =================================== */
+
+.screen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+
+/* ===================================
+   LANDING SCREEN
+   =================================== */
+
+#landing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Greeting text */
+
+.intro {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  width: 300px;
+
+  transform: translateY(-50%);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.3s ease;
+}
+
+.intro.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.intro p {
+  font-size: 27px;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+/* Explore button */
+
+#explore-button {
+  border: none;
+  background: transparent;
+  padding: 0;
+
+  font-size: 17px;
+  font-style: normal;
+  text-decoration: underline;
+
+  transition: opacity 0.2s ease;
+}
+
+#explore-button:hover {
+  opacity: 0.55;
+}
+
+
+/* ===================================
+   AVATARS
+   SAME POSITION AND SIZE
+   =================================== */
+
+#landing-avatar,
+#menu > img {
+  position: fixed;
+
+  width: 320px;
+  max-width: 40vw;
+  height: 400px;
+
+  object-fit: contain;
+
+  top: 50%;
+  left: 65%;
+
+  transform: translate(-50%, -50%);
+}
+
+#landing-avatar {
+  cursor: pointer;
+}
+
+
+/* ===================================
+   MAIN MENU
+   =================================== */
+
+#menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-options {
+  position: absolute;
+
+  top: 50%;
+  left: 20%;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu-options button {
+  width: 125px;
+  height: 65px;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  font-size: 20px;
+  font-style: normal;
+
+  box-shadow: 5px 5px 0 #eeeeee;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.menu-options button:hover {
+  transform: scale(1.07);
+  box-shadow: 7px 7px 0 #dddddd;
+}
+
+
+/* ===================================
+   CONTENT SECTIONS
+   =================================== */
+
+#content {
+  padding: 200px 12% 120px;
+}
+
+/* Section circle */
+
+#section-title {
+  display: inline-flex;
+
+  width: 125px;
+  height: 65px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  border: 1px solid #000000;
+  border-radius: 50%;
+
+  background: #ffffff;
+
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+
+  box-shadow: 5px 5px 0 #eeeeee;
+}
+
+/* Section text - wider and higher */
+
+#section-body {
+  position: absolute;
+
+  top: 20%;
+  left: 40%;
+
+  width: 55%;
+  max-width: none;
+
+  font-size: 18px;
+  font-style: normal;
+  line-height: 1.6;
+
+  white-space: pre-line;
+}
+
+
+/* ===================================
+   BACK TO MENU
+   =================================== */
+
+#back-button {
+  position: absolute;
+
+  top: 500px;
+  left: 12%;
+
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+#back-button:hover {
+  opacity: 0.6;
+}
+
+#back-button img {
+  display: block;
+  width: 120px;
+  height: auto;
+}
+
+
+/* ===================================
+   TMI SLIDESHOW
+   =================================== */
+
+.tmi-container {
+  width: 100%;
+}
+
+.tmi-heading {
+  transform: translateY(-100px);
+}
+
+.tmi-heading h3 {
+  font-size: 25px;
+  font-weight: normal;
+  margin: 0 0 -16px;
+}
+
+.tmi-heading p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Facts and arrows moved left */
+
+.tmi-slideshow {
+  margin-top: -100px;
+
+  transform: translateX(-200px);
+
+  text-align: center;
+}
+
+#tmi-fact {
+  font-size: 21px;
+  line-height: 1.5;
+  min-height: 65px;
+  margin: 0;
+}
+
+.tmi-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.tmi-navigation button {
+  border: none;
+  background: transparent;
+
+  font-size: 27px;
+  padding: 5px 10px;
+
+  transition: opacity 0.2s ease;
+}
+
+.tmi-navigation button:hover:not(:disabled) {
+  opacity: 0.5;
+}
+
+.tmi-navigation button:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+#tmi-counter {
+  font-size: 15px;
+  color: #777777;
+
+  min-width: 45px;
+  text-align: center;
+}
+
+
+/* ===================================
+   RESPONSIVE - MOBILE
+   =================================== */
+
+@media (max-width: 700px) {
+
+  /* Header */
+
+  .site-header {
+    top: 25px;
+    left: 25px;
+  }
+
+  .site-header h1 {
+    font-size: 19px;
+  }
+
+  .site-header p {
+    font-size: 13px;
+  }
+
+  /* Landing */
+
+  .intro {
+    top: 35%;
+    left: 50%;
+
+    width: 90%;
+    max-width: 300px;
+
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+  }
+
+  .intro p {
+    font-size: 23px;
+  }
+
+  /* Avatars */
+
+  #landing-avatar,
+  #menu > img {
+    width: 230px;
+    max-width: 75vw;
+    height: 290px;
+
+    top: 70%;
+    left: 50%;
+  }
+
+  /* Menu */
+
+  .menu-options {
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    gap: 12px;
+  }
+
+  .menu-options button {
+    width: 110px;
+    height: 55px;
+    font-size: 17px;
+  }
+
+  /* Content */
+
+  #content {
+    padding: 160px 25px 140px;
+  }
+
+  #section-body {
+    position: static;
+
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 45px;
+  }
+
+  /* Back button */
+
+  #back-button {
+    left: 25px;
+    bottom: 30px;
+  }
+
+  #back-button img {
+    width: 100px;
+  }
+
+  /* TMI */
+
+  .tmi-heading h3 {
+    font-size: 23px;
+  }
+
+  .tmi-slideshow {
+    margin-top: 45px;
+    margin-left: 0;
+    transform: none;
+    text-align: center;
+  }
+
+  #tmi-fact {
+    font-size: 19px;
+  }
+}

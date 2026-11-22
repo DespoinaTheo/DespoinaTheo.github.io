@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despoina Theodoratou | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+  <script src="tmi.js" defer></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <h1>Despoina Theodoratou</h1>
+    <p>Game Developer, C# Developer</p>
+  </header>
+
+  <main>
+    <!-- Initial landing screen -->
+    <section id="landing" class="screen">
+      <div class="intro">
+        <p>Hi, I am Despoina.<br>
+           I make things.<br>
+           Mostly with code.</p>
+        <button id="explore-button">Click to explore!</button>
+      </div>
+
+      <img
+        id="landing-avatar"
+        src="images/avatar-default.png"
+        alt="Hand-drawn character"
+      >
+    </section>
+
+    <!-- Main menu -->
+    <section id="menu" class="screen" hidden>
+      <nav class="menu-options" aria-label="Portfolio sections">
+        <button data-section="about">About</button>
+        <button data-section="projects">Projects</button>
+        <button data-section="tmi">TMI</button>
+        <button data-section="contact">Contact</button>
+      </nav>
+
+      <img
+        src="images/avatar-menu.png"
+        alt="Hand-drawn character with raised arms"
+      >
+    </section>
+
+    <!-- Content sections -->
+    <section id="content" class="screen" hidden>
+      <h2 id="section-title"></h2>
+      <div id="section-body"></div>
+
+      <button id="back-button" aria-label="Back to menu">
+        <img src="images/back-to-menu.png" alt="">
+      </button>
+    </section>
+  </main>
+
+</body>
+</html>
